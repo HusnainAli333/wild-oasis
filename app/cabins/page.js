@@ -1,12 +1,8 @@
-import Link from "next/link";
-
+export const metadata = {
+  title: "Cabins",
+};
 function Page() {
-  return (
-    <div>
-      <Link href="/about">About</Link>
-      Cabins page
-    </div>
-  );
+  return <div>Cabins page</div>;
 }
 
 export default Page;
