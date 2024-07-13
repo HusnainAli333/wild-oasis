@@ -22,10 +22,10 @@ export default function Navigation() {
         </li>
         <li>
           <Link
-            href="/contact"
+            href="/account"
             className="hover:text-accent-400 transition-colors"
           >
-            Contact us
+            Guest area
           </Link>
         </li>
       </ul>

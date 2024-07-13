@@ -3,7 +3,10 @@ import { Josefin_Sans } from "next/font/google";
 import "@/app/_styles/globals.css";
 
 export const metadata = {
-  title: "The wild oasis",
+  title: {
+    default: "Welcome to Wild Oasis",
+    template: "%s The Wild Oasis",
+  },
   description:
     "small hotel located in the woods of italy deep in the foreset, consist of 8 luxry cabins for the customers to use ",
 };
