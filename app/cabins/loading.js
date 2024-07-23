@@ -1,14 +1,10 @@
 import Spinner from "@/app/_components/Spinner";
 
-function Loading() {
+export default function Loading() {
   return (
-    <div className="gird items-center justify-center">
+    <div className="grid items-center justify-center">
       <Spinner />
-      {/* <p className=" text-xl text-primary-200">
-        loading cabin data
-      </p> */}
+      <p className="text-xl text-primary-200">Loading cabin data...</p>
     </div>
   );
 }
-
-export default Loading;

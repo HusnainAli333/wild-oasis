@@ -1,10 +1,11 @@
 "use client";
+
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import { format } from "date-fns";
-import { useReservationsContext } from "../context/ReservationContext";
+import { useReservation } from "./ReservationContext";
 
 function ReservationReminder() {
-  const { range } = useReservationsContext();
+  const { range, resetRange } = useReservation();
 
   if (!range.from || !range.to) return null;
 
@@ -15,7 +16,10 @@ function ReservationReminder() {
         {format(new Date(range.from), "MMM dd yyyy")} to{" "}
         {format(new Date(range.to), "MMM dd yyyy")}
       </p>
-      <button className="rounded-full p-1 hover:bg-accent-600 transition-all">
+      <button
+        className="rounded-full p-1 hover:bg-accent-600 transition-all"
+        onClick={resetRange}
+      >
         <XMarkIcon className="h-5 w-5" />
       </button>
     </div>
